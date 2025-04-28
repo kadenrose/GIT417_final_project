@@ -1,0 +1,401 @@
+/* CSS BY KADEN ROSE ---- GIT417 ---- 2025 */
+
+/* TYPEFACES */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Pridi:wght@200;300;400;500;600;700&family=Teko:wght@300..700&display=swap');
+
+/* root variables */
+
+:root {
+    /* LIGHT MODE COLORS */
+    --soft-gray: #f5f5f5; /* background */
+    --deep-navy: #1e3a5f; /* headings */
+    --dark-gray: #333333; /* text */
+    --red: #e63946;       /* accent for buttons and borders */
+    --steel-blue: #457b9d; /* secondary accent links and hover */
+    --deep-gray: #1e1e1e; /* footer background */
+
+    /* DARK MODE COLORS */
+    --charcoal: #121212; /* background */
+    --soft-white: #f8f9fa; /* headings */
+    --light-gray: #e0e0e0; /* text */
+  /*--red: #e63946;     same accent for buttons and borders */
+    --cyan: #a8dadc; /* secondary accent links and hover  */
+    --deeper-gray: #0a0a0a; /* footer background */
+
+    /* TYPEFACES */
+    --logo-headings: "Courgette", cursive;
+    --text-font: "Pridi", serif;
+}
+
+/* GLOBAL STYLES */
+
+.boldList {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-gray);
+}
+
+a:visited {
+    color: var(--dark-gray);
+}
+
+#logo{
+    width: auto;
+    height: 62.5px;
+}
+
+html {
+    font-family: var(--text-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--logo-headings);
+    color: var(--deep-navy);
+}
+
+body {
+    background-color: var(--soft-gray);
+    width: 1440px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "header header header aside"
+    "main main main main"
+    "footer footer footer footer";
+    min-width: 760px;
+    color: var(--dark-gray);
+}
+
+/* MAIN ITEMS */
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: var(--red);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#backToTop:hover {
+    background-color: var(--steel-blue);
+    color: var(--light-gray);
+    cursor: pointer;
+}
+
+#backgroundImg{
+    width: 1440px;
+    height: auto;
+}
+
+button{
+    background-color: var(--red);
+    color: var(--dark-gray);
+    border-radius: 5px;
+    padding: 4px;
+}
+
+button:hover{
+    background-color: var(--steel-blue);
+    color: var(--light-gray);
+    cursor: pointer;
+}
+
+/* contactUs inside MAIN STYLES     */
+
+#contactUs{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem auto;
+}
+
+form{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+#submit{
+    background-color: var(--red);
+    border-radius: 5px;
+    height: 2rem;
+    color: var(--dark-gray);
+}
+
+#submit:hover{
+    background-color: var(--steel-blue);
+    color: var(--light-gray);
+    cursor: pointer;
+}
+
+input{
+    border-radius: 5px;
+}
+
+button, #submit{
+    font-family: var(--text-font);
+    font-size: 1.1rem;
+    border: none;
+    margin: 1rem 0;
+}
+
+input[type="radio"]{
+    accent-color: var(--steel-blue); 
+}
+
+input[type="radio"]:hover{
+    cursor: pointer;
+}
+
+/* ourMenu inside of MAIN STYLES */
+
+#ourMenu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "heading heading"
+    "drinks image"
+    "food image";
+    gap: 1rem;
+}
+
+#x78543{
+    grid-area: heading;
+    text-align: center;
+}
+
+#menu-drinks{
+    grid-area: drinks;
+}
+
+#menu-food-items{
+    grid-area: food;
+}
+
+#menuImages{
+    grid-area: image;
+    background-color: var(--steel-blue);
+    border-radius: 5px;
+    height: 650px;
+    width: 650px;
+}
+
+/* products inside of MAIN STYLES */
+
+#products{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "heading heading"
+    "smal smal"
+    "p image"
+    "list image"
+    "facts image";
+    gap: 1rem;
+}
+
+#productsHeading{
+    grid-area: heading;
+    text-align: center;
+}
+
+#prodSmall{
+    grid-area: smal;
+}
+
+#prodP{
+    grid-area: p;
+}
+
+#prodUl{
+    grid-area: list;
+}
+
+#productBox{
+    background-color: var(--steel-blue);
+    border-radius: 5px;
+    grid-area: image;
+    height: 650px;
+    width: 650px;
+}
+
+#facts{
+    grid-area: facts;
+}
+
+/* NAV ITEMS */
+
+nav{
+    grid-area: nav;
+    /* background-color: var(--soft-gray); */
+    /* width: 100%; */
+    max-width: 1300px;
+}
+
+nav a{
+    text-wrap: nowrap;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--red);
+    margin: 1rem;
+    border-radius: 5px;
+    width: calc(100% - 2rem);
+    font-size: 1.2rem;
+}
+
+nav a:hover{
+    background-color: var(--steel-blue);
+    color: var(--light-gray);
+    cursor: pointer;
+}
+
+nav ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* ASIDE ITEMS */
+
+aside{
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--soft-gray);
+    padding: 20px;
+}
+
+/* HEADER ITEMS */
+
+header {
+    grid-area: header;
+    height: 1080px;
+}
+
+/* FOOTER ITEMS */
+
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-color: var(--deep-gray);
+    color: var(--light-gray);
+    margin-top: 3rem;
+}
+
+#guessingGame p{
+    width: 30ch;
+}
+
+footer h2, footer h3, footer h4{
+    color: var(--soft-white);
+}
+
+svg{
+    stroke: var(--red);
+    height: 30px;
+    width: auto;
+}
+
+/* game play styles */
+#guessingGame h3{
+    grid-area: heading;
+}
+
+#rules{
+    grid-area: rules;
+}
+
+#guess{
+    grid-area: guess;
+    font-size: 1rem;
+    font-family: var(--text-font);
+}
+
+#generator{
+    grid-area: play;
+}
+
+#randomNumber{
+    grid-area: random;
+}
+
+#result{
+    grid-area: result;
+}
+
+#guessingGame{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-areas: 
+    "heading heading"
+    "rules rules"
+    "guess play"
+    "random random"
+    "result result";
+    gap: 1rem;
+    width: 400px;
+}
+
+/* JS STYLES */
+
+/* DARK MODE STYLES */
+
+.bodyDarkMode{
+    background-color: var(--charcoal);
+}
+
+.aTextColor{
+    color: var(--light-gray);
+}
+
+.headingColors{
+    color: var(--soft-white);
+}
+
+#menuImages.imageBox{
+    background-color: var(--cyan);
+}
+
+#productBox.imageBox{
+    background-color: var(--cyan);
+}
+
+/* aside.darkModeText{
+    color: var(--dark-gray);
+} */
+
+/* ------error class for formValidation------ */
+#errors{
+    color: var(--red);
+    font-weight: bold;
+}
+
+.error{
+    border-color: var(--red);
+    border-width: 5px;
+}
+
+#errors li{
+    max-width: 25ch;
+}

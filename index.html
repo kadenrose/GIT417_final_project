@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven</title>
+    <meta name="author" content="Kaden Rose">
+    
+    <meta name="description" content="Final Project for GIT417. The Local Coffee shop called Brew Haven. Content provided by ChatGBT, website content written, styled, and scripted by student Kaden Rose.">
+    <meta name="keyword" content="Brew Haven, coffee shop, coffee">
+    <meta name="robots" content="index, follow">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brew Haven Coffee shop">
+    <meta name="twitter:description" content="Final Project for GIT417. The Local Coffee shop called Brew Haven. Content provided by ChatGBT, website content written, styled, and scripted by student Kaden Rose.">
+    <meta name="image" content="images/coffeeBeansHouse.png">
+    <meta name="site" content="@brew_haven_coffee">
+    <meta name="og:title" content="Brew Haven Coffee Shop">
+    <meta name="og:description" content="Final Project for GIT417. The Local Coffee shop called Brew Haven. Content provided by ChatGBT, website content written, styled, and scripted by student Kaden Rose.">
+    <meta name="og:image" content="images/coffeeBeansHouse.png">
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="Brew Haven">
+    <meta name="copyright" content="© 2025 Kaden Rose. All rights reserved.">
+    
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <section>
+            <h1><span id="welcomeTo">Welcome to </span>Brew Haven</h1>
+            <p>The Best Local Coffee Experience</p>
+        </section>
+        <img src="images/hero-light.jpg" alt="Latte on a tan table top." id="backgroundImg">
+    </header>
+    <nav>
+        <ul>
+            <li><img id="logo" src="ICONS/monogram-16px.svg" alt="Logo for Brew Haven"></li>
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#ourMenu">Menu</a></li>
+            <li><a href="#contactUs">Contact Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a id="darkMode">Dark Mode</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <section id="aboutUs">
+            <h3>About Us</h3>
+            <p>At Brew Haven, we are passionate about crafting the perfect cup of coffee. Nestled in the heart of downtown, our shop offers a cozy atmosphere, expertly brewed coffee, and friendly service. Whether you're here for your morning pick-me-up or a relaxing afternoon, we have the perfect brew for you.</p>
+        </section>
+    </aside>
+    <main>
+        <p><a href="#welcomeTo" id="backToTop">Return to top</a></p>
+            
+        <section id="ourMenu">
+            <h3 id="x78543">Our Menu</h3>
+            <section id="menu-drinks">
+                <h4>Signature Drinks</h4>
+                <ul>
+                    <li><button id="espresso"><span class="boldList">Espresso Bliss</span></button> - A rich, bold espresso shot with a smooth finish.</li>
+                    <li><button id="macchiato"><span class="boldList">Caramel Macchiato</span></button> - A perfect blend of espresso, steamed milk, and caramel drizzle.</li>
+                    <li><button id="latte"><span class="boldList">Hazelnut Latte</span></button> - Espresso paired with velvety milk and a hint of hazelnut.</li>
+                </ul>
+            </section>
+
+            <section id="menu-food-items">
+                <h4>Fresh Baked Goods</h4>
+                <ul>
+                    <li><button id="muffin"><span class="boldList">Blueberry Muffin</span></button> - The classic, baked fresh every morning with real, locally-sourced blueberries</li>
+                    <li><button id="croissant"><span class="boldList">Chocolate Croissant</span></button> - Flaky pastry filled with rich, melted chocolate.</li>
+                    <li><button id="bananaBread"><span class="boldList">Vegan Banana Bread</span></button> - A delicious plant-based treat.</li>
+                </ul>
+            </section>
+            <div id="menuImages"></div>
+        </section>
+        <section id="contactUs">
+            <h3>Contact Us</h3>
+            <p>We'd love to hear from you! Please fill out the form below.</p>
+            <section>
+                <form>
+                    <section>
+                        <label for="fullName">Full Name</label>
+                        <input id="fullName" name="fullName" type="text" placeholder="First Last">
+                    </section>
+
+                    <section>
+                        <label for="fone">Phone Number</label>
+                        <input id="fone" name="fone" type="tel" placeholder="(777) 777-7777">
+                    </section>
+
+                    <section>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="youremail@email.com">
+                    </section>
+
+                    <section>
+                        <fieldset id="fieldset1">
+                            <legend>Preferred Method of Contact</legend>
+                            <input name="preferredContact" type="radio" id="preferredContactTel" checked>
+                            <label for="preferredContactTel">Phone</label>
+
+                            <input name="preferredContact" type="radio" id="preferredContactMail">
+                            <label for="preferredContactMail">Email</label>
+                        </fieldset>
+                    </section>
+
+                    <section>
+                        <label for="comments">Comments</label>
+                        <textarea id="comments" placeholder="Comments, questions, concerns"></textarea>
+                    </section>
+
+                    <input type="submit" id="submit" value="OK">
+                </form>
+                <div id="errors"></div>
+            </section>
+
+        </section>
+        <section id="products">
+            <h3 id="productsHeading">Featured Products</h3>
+            <small id="prodSmall">We sell coffee, too!</small>
+            <p id="prodP">Click on a product name to learn more!</p>
+            <ul id="prodUl">
+                <li><button id="ethiopian"><span class="boldList">Ethiopian Single-Origin</span></button> - Bright and fruity, with citrus notes.</li>
+                <li><button id="colombian"><span class="boldList">Colombian Dark Roast</span></button> - Smooth yet bold, with chocolate undertones. Our strongest coffee.</li>
+                <li><button id="houseBlend"><span class="boldList">House Blend</span></button> - A balanced mix of flavors perfect for any coffee lover.</li>
+            </ul>
+            <div id="facts">
+                <h3>Product Information:</h3><ul></ul></div>
+            <div id="productBox">
+                <div id="productImage"></div>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <section id="guessingGame">
+            <h3>Coffee Guessing Game</h3>
+            <p id="rules">Guess a number between 1 and 10 for a chance to win a free coffee for your next visit to Brew Haven!</p>
+            <!-- Enter your guess -->
+            <input id="guess" placeholder="Enter at number between 1 and 10" type="number">
+
+            <button id="generator">Play</button>
+            <!-- A random number is generated -->
+            <p id="randomNumber"><span class="boldList">Random Number</span>: </p>
+            <!-- if the number matches, display a winner banner and a free coffee code -->
+            <p id="result"></p>
+        </section>
+        <section>
+            <p><span class="boldList">Location</span>: 127 Main Street, Denver, CO, USA</p>
+            <h4>Hours of Operation</h4>
+            <table>
+                <tr>
+                    <td>Day</td>
+                    <td>Hours</td>
+                </tr>
+                <tr>
+                    <td>Mon-Fri</td>
+                    <td>5:00am - 7:00pm</td>
+                </tr>
+                <tr>
+                    <td>Sat</td>
+                    <td>6:30am - 4:00pm</td>
+                </tr>
+                <tr>
+                    <td>Sun</td>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <td>Holidays</td>
+                    <td>Closed</td>
+                </tr>
+            </table>
+            <p>
+                <span class="boldList">Follow Us</span>: 
+                <a href="https://www.facebook.com/">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                    </svg></a>
+                <a href="https://www.instagram.com/">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                        <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                        <path d="M16.5 7.5l0 .01"></path>
+                    </svg>
+                </a>
+                <a href="https://x.com/">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                        <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                        <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                    </svg></a>
+            </p>
+        </section>
+    </footer>
+</body>
+</html>
